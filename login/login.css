@@ -44,6 +44,7 @@ form button {
 form button:hover {
     transform: scale(1.05);
 }
+
 /*
 
 CSS MODAL
@@ -67,4 +68,33 @@ CSS MODAL
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+
+.toast {
+    background-color: green;
+    padding: 24px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    animation: toast 5s ease;
+}
+
+.toast p {
+    color: #fff;
+}
+
+@keyframes toast {
+    0% {
+        left: -300px;
+    }
+
+    50% {
+        left: 0;
+        /* transform: rotate(180deg); */
+    }
+
+    100% {
+        left: -300px;
+        /* transform: rotate(360deg); */
+    }
 }

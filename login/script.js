@@ -26,11 +26,8 @@ function formLogin() {
             }
             const userJson = JSON.stringify(user)//JSON
             localStorage.setItem("user", userJson)
-            montarModal("Login efetuado com sucesso!")
-            setTimeout(() => {
+            toast()
 
-                location.href = "/"
-            }, 3000);
         } else {
             montarModal("Credenciais inválidas")
         }
@@ -53,4 +50,18 @@ function montarModal(mensagem) {
         const wrapper = document.querySelector(".wrapper")
         wrapper.remove()
     })
+}
+function toast() {
+    const body = document.querySelector("body")
+    body.insertAdjacentHTML("beforeend", `
+        
+          <div class="toast">
+        <p>Login efetuado com sucesso!</p>
+    </div>
+        `)
+    setTimeout(() => {
+        const toast = document.querySelector(".toast")
+        toast.remove()
+        location.href = "/"
+    }, 5000);
 }
