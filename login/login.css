@@ -45,6 +45,8 @@ form button:hover {
     transform: scale(1.05);
 }
 
+
+
 /*
 
 CSS MODAL
@@ -97,4 +99,16 @@ CSS MODAL
         left: -300px;
         /* transform: rotate(360deg); */
     }
+}
+
+.div_senha {
+    position: relative;
+}
+
+.div_senha button {
+    position: absolute;
+    right: 6px;
+    bottom: 0;
+    background: transparent;
+    color: #000;
 }

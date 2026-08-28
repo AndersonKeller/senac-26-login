@@ -65,3 +65,21 @@ function toast() {
         location.href = "/"
     }, 5000);
 }
+
+//TROCAR O TIPO DO INPUT PARA EXIBIR OU ESCONDER A SENHA
+function showSenha() {
+    const btnShow = document.querySelector("#show")
+    btnShow.addEventListener("click", () => {
+        console.log("show")
+        const inputSenha = document.querySelector("#senha")
+        console.log(inputSenha, 'senha', inputSenha.type)
+        if (inputSenha.type == "password") {
+            inputSenha.type = "text"
+            btnShow.innerText = "esconder"
+        } else {
+            inputSenha.type = "password"
+            btnShow.innerText = "ver"
+        }
+    })
+}
+showSenha()
